@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # Private data
-*.api-key
+*api-key
