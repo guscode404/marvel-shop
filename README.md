@@ -33,11 +33,11 @@
 
 - () - Corpo da página
     - () Componentização básica
-    - () Componentização dinâmica com a API
+    - (X) Componentização dinâmica com a API
 - () - Estilização da página
     - () Layout inicial (mobile)
     - () Responsividade
     - () Layout para diferentes tamanhos de tela
-- () - Consumo de API
+- (X) - Consumo de API
 - () - Testes
 - () - Hospedagem

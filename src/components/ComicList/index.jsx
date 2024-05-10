@@ -1,15 +1,29 @@
 import { Comic } from "./Comic"
 import { StyledList } from "./style"
 
-export const ComicList = ({ page, list }) => {
+export const ComicList = ({ page, setPage, list }) => {
+    const handlePages = (button) => {
+        if(button === "next" && page !== (5)) {
+            setPage(page + 1);
+        } else if(button === "previous" && page !== (1)) {
+            setPage(page - 1);
+        } else {
+            alert("Página indisponível!")
+        }
+    }
+
     return (
-        <StyledList>
-            {list.slice((page - 1) * 4, page * 4).map(comic => (
-                <Comic
-                    key={comic.id}
-                    title={comic.title}
-                />
-            ))}
-        </StyledList>
+        <>
+            <StyledList>
+                {list.slice((page - 1) * 4, page * 4).map(comic => (
+                    <Comic
+                        key={comic.id}
+                        title={comic.title}
+                    />
+                ))}
+            </StyledList>
+            <button onClick={() => handlePages("previous")}>Previous</button>
+            <button onClick={() => handlePages("next")}>Next</button>
+        </>
     )
 }

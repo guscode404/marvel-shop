@@ -5,6 +5,7 @@ import { Header } from './components/Header'
 import { api } from './services/api'
 import { apiKey } from '../api-key'
 import { ComicList } from './components/ComicList'
+import { Section } from './components/Section'
 
 function App() {
   const [page, setPage] = useState(1);
@@ -24,9 +25,9 @@ function App() {
       <GlobalStyle />
       <Header />
       <MainContainer>
-        <p>test</p>
-        <p>test</p>
-        <ComicList page={page} list={comicList} />
+        <Section>
+          <ComicList page={page} setPage={setPage} list={comicList} />
+        </Section>
       </MainContainer>
     </>
   )
