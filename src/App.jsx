@@ -12,6 +12,7 @@ function App() {
       <Header />
       <MainContainer>
         <p>test</p>
+        <p>test</p>
       </MainContainer>
     </>
   )
