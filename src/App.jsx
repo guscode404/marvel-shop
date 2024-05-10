@@ -4,13 +4,17 @@ import { MainContainer } from './components/MainContainer'
 import { Header } from './components/Header'
 import { api } from './services/api'
 import { apiKey } from '../api-key'
+import { ComicList } from './components/ComicList'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [page, setPage] = useState(1);
+  const [comicList, setComicList] = useState([]);
+
   useEffect(() => {
     const getComics = async () => {
       const { data } = await api.get(`/comics?apikey=${apiKey}`);
-      console.log(data.data.results)
+      setComicList(data.data.results)
+      console.log(comicList);
     }
     getComics();
   }, [])
@@ -22,6 +26,7 @@ function App() {
       <MainContainer>
         <p>test</p>
         <p>test</p>
+        <ComicList page={page} list={comicList} />
       </MainContainer>
     </>
   )
