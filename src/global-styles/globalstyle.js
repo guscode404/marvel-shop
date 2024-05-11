@@ -8,6 +8,10 @@ export const GlobalStyle = createGlobalStyle`
         list-style-type: none;
     }
 
+    body {
+        background-color: #0A0A0A;
+    }
+
     div#root {
         width: 100%;
         height: 100%;

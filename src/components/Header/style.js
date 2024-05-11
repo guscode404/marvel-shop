@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
     top: 0;
     background-color: #FFFFFF;
     width: 100%;
-    box-shadow: 0 1px 8px #00000099;
+    box-shadow: 0 1px 8px #FFFFFF99;
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
