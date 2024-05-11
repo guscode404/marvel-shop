@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Comic } from "./Comic"
 import { StyledContainer, StyledList } from "./style"
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 export const ComicList = ({ page, setPage, list }) => {
     const handlePages = (button) => {
@@ -17,14 +19,20 @@ export const ComicList = ({ page, setPage, list }) => {
             <StyledList>
                 {list.slice((page - 1) * 4, page * 4).map(comic => (
                     <Comic
-                        key={comic.id}
-                        title={comic.title}
+                    key={comic.id}
+                    title={comic.title}
                     />
                 ))}
             </StyledList>
+
             <StyledContainer>
-                <button onClick={() => handlePages("previous")}>Previous</button>
-                <button onClick={() => handlePages("next")}>Next</button>
+                <button onClick={() => handlePages("previous")}>
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
+                <span>Página</span>
+                <button onClick={() => handlePages("next")}>
+                    <FontAwesomeIcon icon={faChevronRight} />
+                </button>
             </StyledContainer>
         </>
     )

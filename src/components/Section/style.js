@@ -5,8 +5,8 @@ export const StyledSection = styled.section`
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 1px 8px #FFFFFF99;
-
-    > button {
-        margin: 2rem 0;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
