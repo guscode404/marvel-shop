@@ -1,9 +1,24 @@
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { StyledContainer } from "./style"
 import { ShopContext } from "../../providers/ShopContext"
 
 export const InfoLayout = ({ comic }) => {
     const { formatPrice } = useContext(ShopContext);
+
+    const addToCart = () => {
+        if(localStorage.getItem("cart")) {
+            const cart = JSON.parse(localStorage.getItem("cart"))
+            const isComicInCart = cart.some((currentComic) => currentComic.id == comic.id);
+
+            if(!isComicInCart) {
+                localStorage.setItem("cart", JSON.stringify([...cart, comic]));
+            } else {
+                alert("O quadrinho já está no carrinho!");
+            }
+        } else {
+            localStorage.setItem("cart", JSON.stringify([comic]));
+        }
+    }
 
     formatPrice(comic);
 
@@ -31,7 +46,7 @@ export const InfoLayout = ({ comic }) => {
                                 return ", " + creator.name;
                             })}
                         </h3>
-                        <button>
+                        <button onClick={addToCart}>
                             Adicionar ao carrinho
                         </button>
                     </section>

@@ -9,7 +9,7 @@ import { ComicContext } from "../../providers/ComicContext";
 
 export const ProductInfoPage = () => {
     const { id } = useParams();
-    const { comicList, getComicList } = useContext(ComicContext);
+    const { getComicList } = useContext(ComicContext);
     const [ comic, setComic ] = useState({});
     const [loaded, setLoaded] = useState(false);
 
