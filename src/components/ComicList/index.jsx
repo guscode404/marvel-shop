@@ -5,7 +5,7 @@ import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons
 
 export const ComicList = ({ page, setPage, list }) => {
     const handlePages = (button) => {
-        if(button === "next" && page !== (5)) {
+        if(button === "next" && page !== (list.length / 4)) {
             setPage(page + 1);
         } else if(button === "previous" && page !== (1)) {
             setPage(page - 1);
@@ -34,7 +34,7 @@ export const ComicList = ({ page, setPage, list }) => {
                     <FontAwesomeIcon icon={faChevronRight} />
                 </button>
             </StyledContainer>
-            <span>{page} de 5</span>
+            <span>{page} de {list.length / 4}</span>
         </>
     )
 }
