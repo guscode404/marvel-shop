@@ -6,6 +6,7 @@ export const StyledList = styled.ul`
     gap: 1rem;
     height: 27.5rem;
     overflow-y: scroll;
+    max-height: 80vh;
 `
 
 export const StyledContainer = styled.div`
@@ -16,7 +17,8 @@ export const StyledContainer = styled.div`
     justify-content: space-between;
 
     > span {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
     }
 
     > button {
@@ -24,7 +26,7 @@ export const StyledContainer = styled.div`
         border: none;
 
         > svg {
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
     }
 `

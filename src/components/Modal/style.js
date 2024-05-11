@@ -27,6 +27,7 @@ export const StyledModal = styled.div.attrs(props => ({
         display: flex;
         justify-content: flex-end;
         background-color: #FFFFFF;
+        margin-bottom: 1rem;
 
         > button {
             border: none;

@@ -6,6 +6,8 @@ export const StyledContainer = styled.div.attrs(props => ({
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 100%;
 
     img {
         width: 14rem;

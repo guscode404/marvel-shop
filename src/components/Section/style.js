@@ -7,8 +7,9 @@ export const StyledSection = styled.section`
     box-shadow: 0 1px 8px #FFFFFF99;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-bottom: 1.25rem;
     width: 100%;
+    min-height: 100%;
+    max-height: 200%;
 `

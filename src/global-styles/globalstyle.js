@@ -16,14 +16,16 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         background-color: #0A0A0A;
+        max-height: 200%;
+        min-height: 100vh;
     }
 
     div#root {
         width: 100%;
-        height: 100%;
+        max-height: 200%;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         text-align: center;
     }
