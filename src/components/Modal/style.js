@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledModal = styled.div`
+export const StyledModal = styled.div.attrs(props => ({
+    className: props.className
+}))`
     position: fixed;
     display: flex;
     align-items: center;
@@ -10,11 +12,26 @@ export const StyledModal = styled.div`
     height: 100vh;
     background: rgba(0, 0, 0, 0.3);
 
-    > div {
+    .modal-content {
         position: relative;
-        width: 100%:
-        max-width: 400px;
-        padding: 2rem;
+        width: 80%;
+        max-width: 80%;
+        height: 80%;
+        max-height: 80%;
+        padding: 1rem 2rem 2rem 2rem;
         background: #FFFFFF;
+        border-radius: 2rem;
+    }
+
+    .top-menu {
+        display: flex;
+        justify-content: flex-end;
+        background-color: #FFFFFF;
+
+        > button {
+            border: none;
+            background-color: #FFFFFF;
+            font-size: 2rem;
+        }
     }
 `
