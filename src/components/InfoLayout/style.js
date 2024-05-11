@@ -14,7 +14,7 @@ export const StyledContainer = styled.div.attrs(props => ({
 
     > h1 {
         font-size: 1.75rem;
-        margin-top: 0.25rem;
+        margin: 0.25rem 0;
     }
 
     > div {
