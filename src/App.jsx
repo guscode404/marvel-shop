@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 import { RoutesMain } from './routes/RoutesMain'
 import { Modal } from './components/Modal'
 import { useState } from 'react'
+import { Cart } from './components/Cart'
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +17,7 @@ function App() {
       <RoutesMain />
       { isModalOpen ?
           <Modal toggleModal={toggleModal}>
-          
+            <Cart />
           </Modal> :
         null }
     </>
