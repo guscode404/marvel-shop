@@ -8,7 +8,7 @@ export const StyledContainer = styled.div.attrs(props => ({
     flex-direction: column;
 
     img {
-        width: 16rem;
+        width: 14rem;
         border-radius: 0.5rem;
     }
 
