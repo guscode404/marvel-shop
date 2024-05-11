@@ -7,7 +7,6 @@ export const InfoLayout = ({ comic }) => {
 
     formatPrice(comic);
 
-
     return(
         <StyledContainer>
                 <img

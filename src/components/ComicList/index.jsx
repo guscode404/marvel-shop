@@ -17,10 +17,11 @@ export const ComicList = ({ page, setPage, list }) => {
     return (
         <>
             <StyledList>
-                {list.slice((page - 1) * 4, page * 4).map(comic => (
+                {list.slice((page - 1) * 4, page * 4).map((comic) => (
                     <Comic
                     key={comic.id}
                     comic={comic}
+                    id={comic.id}
                     />
                 ))}
             </StyledList>
