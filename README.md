@@ -31,11 +31,11 @@
 
 # Checklist
 
-- () - Corpo da página
-    - () Componentização básica
+- (X) - Corpo da página
+    - (X) Componentização básica
     - (X) Componentização dinâmica com a API
-- () - Estilização da página
-    - () Layout inicial (mobile)
+- (X) - Estilização da página
+    - (X) Layout inicial (mobile)
     - () Responsividade
     - () Layout para diferentes tamanhos de tela
 - (X) - Consumo de API
