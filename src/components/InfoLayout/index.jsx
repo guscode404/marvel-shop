@@ -1,7 +1,6 @@
 import { useContext, useEffect } from "react"
 import { StyledContainer } from "./style"
 import { ShopContext } from "../../providers/ShopContext"
-import { api } from "../../services/api";
 
 export const InfoLayout = ({ comic }) => {
     const { formatPrice } = useContext(ShopContext);
@@ -14,14 +13,12 @@ export const InfoLayout = ({ comic }) => {
                 <img
                     src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
                     alt="Comic Cover"
-                    />
-                {console.log(comic)}
+                />
                 <h1>{comic.title}</h1>
                 <div>
                     <p>Por <span>${comic.prices[0].price}</span></p>
                     <section className="product-info">
                         <h2>Informações</h2>
-                        {console.log(comic.pageCount)}
                         {
                             comic.pageCount !== 0 ?
                             <h3>{comic.pageCount} páginas</h3> :

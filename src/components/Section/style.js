@@ -10,4 +10,5 @@ export const StyledSection = styled.section`
     justify-content: center;
     align-items: center;
     margin-bottom: 1.25rem;
+    width: 100%;
 `

@@ -3,13 +3,13 @@ import { StyledHeader } from "./style"
 import { faCartShopping, faHouse } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
 
-export const Header = () => {
+export const Header = ({ toggleModal }) => {
     return (
         <StyledHeader>
             <div>
                 <img src=".././src/assets/marvel-icon.jpg" alt="Marvel Icon" />
                 <nav>
-                    <button>
+                    <button onClick={toggleModal}>
                         <FontAwesomeIcon icon={faCartShopping} />
                     </button>
                     <button>
