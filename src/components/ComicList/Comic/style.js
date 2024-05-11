@@ -22,12 +22,12 @@ export const StyledListItem = styled.li`
         color: #2DD638;
     }
 
-    > button {
+    > a > button {
         padding: 0.5rem 1.5rem;
         border-radius: 0.375rem;
         font-size: 1rem;
         font-weight: 500;
-        color: #FFFFFF;
         background-color: #404040;
+        color: #FFFFFF;
     }
 `

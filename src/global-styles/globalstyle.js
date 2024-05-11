@@ -7,6 +7,11 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         list-style-type: none;
         font-family: "Roboto", sans-serif;
+        text-decoration: none;
+
+        a {
+            color: #000000;
+        }
     }
 
     body {
