@@ -20,7 +20,7 @@ export const ComicList = ({ page, setPage, list }) => {
                 {list.slice((page - 1) * 4, page * 4).map(comic => (
                     <Comic
                     key={comic.id}
-                    title={comic.title}
+                    comic={comic}
                     />
                 ))}
             </StyledList>
@@ -34,6 +34,7 @@ export const ComicList = ({ page, setPage, list }) => {
                     <FontAwesomeIcon icon={faChevronRight} />
                 </button>
             </StyledContainer>
+            <span>{page} de 5</span>
         </>
     )
 }

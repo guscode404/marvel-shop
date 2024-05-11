@@ -4,17 +4,19 @@ export const StyledList = styled.ul`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    height: 27.5rem;
+    overflow-y: scroll;
 `
 
 export const StyledContainer = styled.div`
     display: flex;
     gap: 1rem;
-    margin: 1rem 0;
+    margin-top: 1.5rem;
     width: 80%;
     justify-content: space-between;
 
     > span {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     > button {
@@ -22,7 +24,7 @@ export const StyledContainer = styled.div`
         border: none;
 
         > svg {
-            font-size: 2rem;
+            font-size: 1rem;
         }
     }
 `
