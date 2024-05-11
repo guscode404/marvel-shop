@@ -1,5 +1,5 @@
 import { Comic } from "./Comic"
-import { StyledList } from "./style"
+import { StyledContainer, StyledList } from "./style"
 
 export const ComicList = ({ page, setPage, list }) => {
     const handlePages = (button) => {
@@ -22,8 +22,10 @@ export const ComicList = ({ page, setPage, list }) => {
                     />
                 ))}
             </StyledList>
-            <button onClick={() => handlePages("previous")}>Previous</button>
-            <button onClick={() => handlePages("next")}>Next</button>
+            <StyledContainer>
+                <button onClick={() => handlePages("previous")}>Previous</button>
+                <button onClick={() => handlePages("next")}>Next</button>
+            </StyledContainer>
         </>
     )
 }
