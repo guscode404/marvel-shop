@@ -1,7 +1,5 @@
 import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
-import { api } from "../../services/api";
-import { apiKey } from "../../../api-key";
 import { Section } from "../../components/Section";
 import { InfoLayout } from "../../components/InfoLayout";
 import { MainContainer } from "../../components/MainContainer";

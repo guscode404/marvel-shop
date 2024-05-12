@@ -24,6 +24,6 @@ dist-ssr
 *.sw?
 
 # Private data
-api-key.js
+.env
 
 .vercel
