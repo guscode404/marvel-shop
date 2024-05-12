@@ -4,13 +4,8 @@ import { faX } from "@fortawesome/free-solid-svg-icons"
 
 export const CartComic = ({ comic, cartList, setCartList }) => {
     const removeFromCart = () => {
-        const list = cartList;
-        const index = cartList.findIndex((currentComic) => {
-            return currentComic.id === comic.id;
-        })
-
-        list.splice(index, 1);
-        localStorage.setItem("cart", JSON.stringify(cartList));
+        const list = cartList.filter(currentComic => currentComic.id !== comic.id);
+        localStorage.setItem("cart", JSON.stringify(list));
         setCartList(JSON.parse(localStorage.getItem("cart")));
     }
 
