@@ -25,3 +25,5 @@ dist-ssr
 
 # Private data
 api-key.js
+
+.vercel
