@@ -1,6 +1,7 @@
-import { useContext } from "react"
-import { StyledContainer } from "./style"
-import { ShopContext } from "../../providers/ShopContext"
+import { useContext } from "react";
+import { StyledContainer } from "./style";
+import { ShopContext } from "../../providers/ShopContext";
+import { toast } from "react-toastify";
 
 export const InfoLayout = ({ comic }) => {
     const { formatPrice } = useContext(ShopContext);
@@ -13,7 +14,16 @@ export const InfoLayout = ({ comic }) => {
             if(!isComicInCart) {
                 localStorage.setItem("cart", JSON.stringify([...cart, comic]));
             } else {
-                alert("O quadrinho já está no carrinho!");
+                toast.error("O quadrinho já está no carrinho!", {
+                    position: "top-center",
+                    autoClose: 2500,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light"
+                });
             }
         } else {
             localStorage.setItem("cart", JSON.stringify([comic]));

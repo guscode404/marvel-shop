@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Comic } from "./Comic"
 import { StyledContainer, StyledList } from "./style"
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { toast } from "react-toastify"
 
 export const ComicList = ({ page, setPage, list }) => {
     const handlePages = (button) => {
@@ -10,7 +11,16 @@ export const ComicList = ({ page, setPage, list }) => {
         } else if(button === "previous" && page !== (1)) {
             setPage(page - 1);
         } else {
-            alert("Página indisponível!")
+            toast.error("Página indisponível!", {
+                position: "top-center",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light"
+            });
         }
     }
 

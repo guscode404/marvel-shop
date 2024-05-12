@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { CartComic } from "./CartComic";
 import { StyledContainer } from "./style"
+import { toast } from "react-toastify";
 
 export const Cart = () => {
     const [cartList, setCartList] = useState([])
@@ -21,6 +22,23 @@ export const Cart = () => {
         })
 
         return total.toFixed(2);
+    }
+
+    const confirmPurchase = () => {
+        toast.success("Compra efetuada com sucesso!", {
+            position: "top-center",
+            autoClose: 2500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light"
+        });
+
+        setCartList([]);
+        localStorage.setItem("cart", JSON.stringify([]));
+        cart = [];
     }
 
     useEffect(() => {
@@ -47,7 +65,7 @@ export const Cart = () => {
                 <p>Seu carrinho está vazio!</p> :
                 <>
                     <p>Total: <span>${obtainTotalValue()}</span></p>
-                    <button className="buy-button">Efetuar compra</button>
+                    <button onClick={confirmPurchase} className="buy-button">Efetuar compra</button>
                 </>
                 }
             </div>
