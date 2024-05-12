@@ -38,7 +38,8 @@ export const Cart = () => {
                         comic={comic} 
                         cartList={cartList}
                         setCartList={setCartList}
-                    /> )}
+                    />
+                )}
             </ol>
 
             {cart.length === 0 ?
