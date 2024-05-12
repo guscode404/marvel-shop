@@ -17,8 +17,12 @@ export const StyledHeader = styled.header`
         justify-content: space-between;
         align-items: center;
 
-        > img {
-            width: 40%;
+        a {
+            display: flex;
+
+            > img {
+                width: 40%;
+            }
         }
 
         > nav {
@@ -36,5 +40,19 @@ export const StyledHeader = styled.header`
     svg {
         color: #F0141E;
         font-size: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        height: 2.5rem;
+        box-shadow: 0 1px 8px #00000011;
+
+        > div {
+            width: 80%;
+
+            img {
+                width: 10%;
+                height: 100%;
+            }
+        }
     }
 `

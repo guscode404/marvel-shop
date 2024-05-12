@@ -30,4 +30,10 @@ export const StyledContainer = styled.div.attrs(props => ({
             font-weight: 600;
         }
     }
+    
+    @media (min-width: 768px) {
+        ol {
+            max-height: 20rem;
+        }
+    }
 `

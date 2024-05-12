@@ -34,4 +34,23 @@ export const StyledListItem = styled.li`
         background-color: #404040;
         color: #FFFFFF;
     }
+
+    @media (min-width: 768px) {
+        width: 45%;
+        border: none;
+        justify-content: center;
+        align-items: center;
+
+        > img {
+            height: 12rem;
+        }
+
+        > h2 {
+            font-size: 1.25rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
 `

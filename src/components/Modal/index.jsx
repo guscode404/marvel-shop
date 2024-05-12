@@ -7,9 +7,8 @@ export const Modal = ({ children, toggleModal, modalTitle }) => {
         <StyledModal role="dialog">
             <div className="modal-content">
                 <div className="top-menu">
-                    <div>
-                        <h2>{modalTitle}</h2>
-                    </div>
+                    <div></div>
+                    <h2>{modalTitle}</h2>
                     <button onClick={toggleModal}>
                         <FontAwesomeIcon icon={faX} />
                     </button>

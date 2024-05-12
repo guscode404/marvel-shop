@@ -7,6 +7,17 @@ export const StyledList = styled.ul`
     height: 27.5rem;
     overflow-y: scroll;
     max-height: 80vh;
+
+    @media (min-width: 768px) {
+        max-height: none;
+        height: 100%;
+        background-color: red;
+        width: 100%;
+        overflow-y: hidden;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 `
 
 export const StyledContainer = styled.div`
@@ -24,6 +35,7 @@ export const StyledContainer = styled.div`
     > button {
         background: none;
         border: none;
+        cursor: pointer;
 
         > svg {
             font-size: 1.5rem;

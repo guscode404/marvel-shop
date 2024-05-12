@@ -28,12 +28,6 @@ export const StyledModal = styled.div.attrs(props => ({
         background-color: #FFFFFF;
         margin-bottom: 1rem;
 
-        > div {
-            display: flex;
-            justify-content: flex-end;
-            width: 75%;
-        }
-
         > button {
             border: none;
             background-color: #FFFFFF;

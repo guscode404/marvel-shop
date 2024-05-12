@@ -12,4 +12,10 @@ export const StyledSection = styled.section`
     width: 100%;
     min-height: 100%;
     max-height: 200%;
+
+    @media (min-width: 768px) {
+        max-height: 5%;
+        max-width: 100%;
+        display: flex;
+    }
 `

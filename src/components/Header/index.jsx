@@ -7,7 +7,9 @@ export const Header = ({ toggleModal }) => {
     return (
         <StyledHeader>
             <div>
-                <img src=".././src/assets/marvel-icon.jpg" alt="Marvel Icon" />
+                <Link to="/">
+                    <img src=".././src/assets/marvel-icon.jpg" alt="Marvel Icon" />
+                </Link>
                 <nav>
                     <button onClick={toggleModal}>
                         <FontAwesomeIcon icon={faCartShopping} />

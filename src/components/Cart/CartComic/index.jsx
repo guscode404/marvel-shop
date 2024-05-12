@@ -9,7 +9,6 @@ export const CartComic = ({ comic, cartList, setCartList }) => {
             return currentComic.id === comic.id;
         })
 
-        console.log(index);
         list.splice(index, 1);
         localStorage.setItem("cart", JSON.stringify(cartList));
         setCartList(JSON.parse(localStorage.getItem("cart")));
