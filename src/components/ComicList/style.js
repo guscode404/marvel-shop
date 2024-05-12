@@ -11,7 +11,6 @@ export const StyledList = styled.ul`
     @media (min-width: 768px) {
         max-height: none;
         height: 100%;
-        background-color: red;
         width: 100%;
         overflow-y: hidden;
         flex-direction: row;
