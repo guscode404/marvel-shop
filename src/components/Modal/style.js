@@ -34,4 +34,10 @@ export const StyledModal = styled.div.attrs(props => ({
             font-size: 2rem;
         }
     }
+
+    @media (min-width: 768px) {
+        .modal-content {
+            height: 75vh;
+        }
+    }
 `

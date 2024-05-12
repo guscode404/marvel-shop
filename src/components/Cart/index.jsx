@@ -42,13 +42,15 @@ export const Cart = () => {
                 )}
             </ol>
 
-            {cart.length === 0 ?
-            <p>Seu carrinho está vazio!</p> :
-            <>
-                <p>Total: <span>${obtainTotalValue()}</span></p>
-                <button className="buy-button">Efetuar compra</button>
-            </>
-            }
+            <div>
+                {cart.length === 0 ?
+                <p>Seu carrinho está vazio!</p> :
+                <>
+                    <p>Total: <span>${obtainTotalValue()}</span></p>
+                    <button className="buy-button">Efetuar compra</button>
+                </>
+                }
+            </div>
             
         </StyledContainer>
     )

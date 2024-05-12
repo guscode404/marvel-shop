@@ -62,4 +62,9 @@ export const StyledContainer = styled.div.attrs(props => ({
             margin-top: 0.5rem;
         }
     }
+
+    @media (min-width: 768px) {
+        width: 50%;
+        max-width: 50%;
+    }
 `

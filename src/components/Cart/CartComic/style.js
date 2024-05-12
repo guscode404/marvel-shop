@@ -35,4 +35,14 @@ export const StyledCartComic = styled.li`
             font-size: 1rem;
         }
     }
+
+    @media (min-width: 768px) {
+
+        > div {
+            > img {
+                width: default;
+                height: default;
+            }
+        }
+    }
 `

@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const StyledContainer = styled.div.attrs(props => ({
     className: props.className
 }))`
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
     > ol {
         border-radius: 1rem;
@@ -22,8 +27,8 @@ export const StyledContainer = styled.div.attrs(props => ({
         margin-top: 0.5rem;
     }
 
-    > p {
-        font-size: 1.25rem;
+    > div > p {
+        font-size: 1.5rem;
 
         > span {
             color: #2DD638;
@@ -33,7 +38,7 @@ export const StyledContainer = styled.div.attrs(props => ({
     
     @media (min-width: 768px) {
         ol {
-            max-height: 20rem;
+            max-height: 40vh;
         }
     }
 `
