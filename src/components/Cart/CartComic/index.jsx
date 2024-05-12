@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { StyledCartComic } from "./style"
-import { faX } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { StyledCartComic } from "./style";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 export const CartComic = ({ comic, cartList, setCartList }) => {
     const removeFromCart = () => {

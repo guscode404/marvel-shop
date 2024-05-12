@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CartComic } from "./CartComic";
-import { StyledContainer } from "./style"
+import { StyledContainer } from "./style";
 import { toast } from "react-toastify";
 
 export const Cart = () => {

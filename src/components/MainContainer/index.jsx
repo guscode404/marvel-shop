@@ -1,4 +1,4 @@
-import { StyledContainer } from "./style"
+import { StyledContainer } from "./style";
 
 export const MainContainer = ({ children }) => {
     return (

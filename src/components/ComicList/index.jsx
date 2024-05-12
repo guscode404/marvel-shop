@@ -1,8 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Comic } from "./Comic"
-import { StyledContainer, StyledList } from "./style"
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
-import { toast } from "react-toastify"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Comic } from "./Comic";
+import { StyledContainer, StyledList } from "./style";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { toast } from "react-toastify";
 
 export const ComicList = ({ page, setPage, list }) => {
     const handlePages = (button) => {

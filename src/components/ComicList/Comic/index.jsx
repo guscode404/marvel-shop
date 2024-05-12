@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
-import { StyledListItem } from "./style"
-import { ShopContext } from "../../../providers/ShopContext"
-import { useContext } from "react"
+import { Link } from "react-router-dom";
+import { StyledListItem } from "./style";
+import { ShopContext } from "../../../providers/ShopContext";
+import { useContext } from "react";
 
 export const Comic = ({ comic, id }) => {
     const { formatPrice } = useContext(ShopContext)

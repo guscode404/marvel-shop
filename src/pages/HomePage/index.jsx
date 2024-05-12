@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import { ComicList } from "../../components/ComicList"
-import { MainContainer } from "../../components/MainContainer"
-import { Section } from "../../components/Section"
+import { ComicList } from "../../components/ComicList";
+import { MainContainer } from "../../components/MainContainer";
+import { Section } from "../../components/Section";
 import { ComicContext } from "../../providers/ComicContext";
 
 export const HomePage = () => {

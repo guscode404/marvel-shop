@@ -1,4 +1,4 @@
-import { StyledSection } from "./style"
+import { StyledSection } from "./style";
 
 export const Section = ({ children, className }) => {
     return (

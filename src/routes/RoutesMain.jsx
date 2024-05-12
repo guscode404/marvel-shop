@@ -1,6 +1,6 @@
-import { Route, Routes } from "react-router-dom"
-import { HomePage } from "../pages/HomePage"
-import { ProductInfoPage } from "../pages/ProductInfoPage"
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "../pages/HomePage";
+import { ProductInfoPage } from "../pages/ProductInfoPage";
 
 export const RoutesMain = () => {
     return (

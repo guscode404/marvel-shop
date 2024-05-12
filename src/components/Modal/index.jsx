@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { StyledModal } from "./style"
-import { faX } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { StyledModal } from "./style";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 export const Modal = ({ children, toggleModal, modalTitle }) => {
     return(

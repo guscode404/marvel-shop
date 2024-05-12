@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { StyledHeader } from "./style"
-import { faCartShopping, faHouse } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { StyledHeader } from "./style";
+import { faCartShopping, faHouse } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import marvel_icon from "../../assets/marvel_icon.jpg";
 
 export const Header = ({ toggleModal }) => {

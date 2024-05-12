@@ -1,10 +1,10 @@
-import { GlobalStyle } from './global-styles/globalstyle'
-import { Header } from './components/Header'
-import { RoutesMain } from './routes/RoutesMain'
-import { Modal } from './components/Modal'
-import { useState } from 'react'
-import { Cart } from './components/Cart'
-import { ToastContainer, toast } from "react-toastify";
+import { GlobalStyle } from './global-styles/globalstyle';
+import { Header } from './components/Header';
+import { RoutesMain } from './routes/RoutesMain';
+import { Modal } from './components/Modal';
+import { useState } from 'react';
+import { Cart } from './components/Cart';
+import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
