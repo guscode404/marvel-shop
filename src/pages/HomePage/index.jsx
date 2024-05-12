@@ -8,7 +8,6 @@ import { ComicContext } from "../../providers/ComicContext";
 
 export const HomePage = () => {
     const [page, setPage] = useState(1);
-    //const [comicList, setComicList] = useState([]);
     const { comicList, getComicList } = useContext(ComicContext);
     const [loaded, setLoaded] = useState(false);
 

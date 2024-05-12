@@ -36,8 +36,8 @@
     - (X) Componentização dinâmica com a API
 - (X) - Estilização da página
     - (X) Layout inicial (mobile)
-    - () Responsividade
-    - () Layout para diferentes tamanhos de tela
+    - (X) Responsividade
+    - (X) Layout para diferentes tamanhos de tela
 - (X) - Consumo de API
 - () - Testes
-- () - Hospedagem
+- (X) - Hospedagem
