@@ -1,6 +1,6 @@
 describe('navigation pages', () => {
   it('should be navigate pages correctly', () => {
-    cy.visit('/')
+    cy.visit('/');
 
     const nextButton = cy.get('section div button')
       .eq(1);
