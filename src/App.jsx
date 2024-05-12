@@ -16,7 +16,7 @@ function App() {
       <Header toggleModal={toggleModal} />
       <RoutesMain />
       { isModalOpen ?
-          <Modal toggleModal={toggleModal}>
+          <Modal toggleModal={toggleModal} modalTitle="Seu carrinho">
             <Cart />
           </Modal> :
         null }

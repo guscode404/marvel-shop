@@ -4,6 +4,7 @@ import { StyledContainer } from "./style"
 
 export const Cart = () => {
     const [cartList, setCartList] = useState([])
+    const cart = JSON.parse(localStorage.getItem("cart"))
 
     const obtainTotalValue = () => {
         let total = 0;
@@ -16,7 +17,9 @@ export const Cart = () => {
     }
 
     useEffect(() => {
-        setCartList(JSON.parse(localStorage.getItem("cart")));
+        if(cart) {
+            setCartList(cart);
+        }
     }, [])
 
     return(
@@ -30,8 +33,15 @@ export const Cart = () => {
                         setCartList={setCartList}
                     /> )}
             </ol>
-            <p>Total: <span>${obtainTotalValue()}</span></p>
-            <button className="buy-button">Efetuar compra</button>
+
+            {cart ?
+            <>
+                <p>Total: <span>${obtainTotalValue()}</span></p>
+                <button className="buy-button">Efetuar compra</button>
+            </> :
+            <p>Seu carrinho está vazio!</p>
+            }
+            
         </StyledContainer>
     )
 }

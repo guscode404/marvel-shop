@@ -24,9 +24,15 @@ export const StyledModal = styled.div.attrs(props => ({
 
     .top-menu {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         background-color: #FFFFFF;
         margin-bottom: 1rem;
+
+        > div {
+            display: flex;
+            justify-content: flex-end;
+            width: 75%;
+        }
 
         > button {
             border: none;
