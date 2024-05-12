@@ -4,14 +4,11 @@ export const StyledContainer = styled.div.attrs(props => ({
     className: props.className
 }))`
 
-    height: 100%;
-
     > ol {
         border-radius: 1rem;
         max-height: 22rem;
         overflow-y: scroll;
         margin-bottom: 0.5rem;
-        min-height: 70%;
     }
 
     .buy-button {

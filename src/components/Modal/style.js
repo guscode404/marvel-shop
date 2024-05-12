@@ -16,7 +16,6 @@ export const StyledModal = styled.div.attrs(props => ({
         position: relative;
         width: 80%;
         max-width: 80%;
-        height: 80%;
         max-height: 80%;
         padding: 1rem 2rem 2rem 2rem;
         background: #FFFFFF;
