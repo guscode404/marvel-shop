@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { CartComic } from "./CartComic";
 import { StyledContainer } from "./style";
 import { toast } from "react-toastify";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Cart = () => {
     const [cartList, setCartList] = useState([])

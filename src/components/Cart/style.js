@@ -51,6 +51,7 @@ export const StyledContainer = styled.div.attrs(props => ({
         > div {
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 0.25rem;
@@ -63,9 +64,9 @@ export const StyledContainer = styled.div.attrs(props => ({
             }
 
             > button {
-                font-size: 0.75rem;
+                font-size: 1rem;
                 border-radius: 0.5rem;
-                padding: 0.25rem;
+                padding: 0.25rem 0.5rem;
                 background-color: #2DD638;
                 color: #FFFFFF;
                 border: none;
@@ -89,6 +90,15 @@ export const StyledContainer = styled.div.attrs(props => ({
 
         ol {
             max-height: 40vh;
+        }
+
+        .coupon-container > div {
+            flex-direction: row;
+
+            > button {
+                font-size: 0.75rem;
+                padding: 0.25rem;
+            }
         }
     }
 `
