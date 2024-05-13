@@ -1,43 +1,14 @@
-# Projeto utilizando React, front-end da loja de quadrinhos da Marvel.
+# Marvel Comic Shop
 
-- Moderno;
-- Bonito;
-- Sem problemas para efetuar a compra.
+O projeto consiste em um website feito com React, consumindo a API da Marvel, com o intuíto de simular uma loja de HQ's. O projeto conta com tecnologias como:
+- React;
+- CSS com Styled Components;
+- JavaScript;
+- Testes E2E com Cypress;
+- React Router DOM.
 
+O website foi planejado visando um layout simples e intuitivo, enquanto ainda agradável ao usuário, sendo um layout pequeno e com ícones descritivos, além de fornecer semântica e responsividade.
 
-# Requisitos:
+O website faz uma única requisição à API, e então salva os resultados no LocalStorage do navegador, utilizando-o para manipular a lista de HQ's, enquanto mantém salvo as HQ's listadas como raras.
 
-- Deve utilizar React;
-- Deve utilizar Styled Components;
-- Deve realizar testes E2E com Cypress;
-- UI deve ser de sua autoria, bonita e simples;
-- Layout deve ser responsivo/mobile first;
-- Deve ser hospedado em algum host.
-
-
-# Especificações:
-
-- Listagem paginada das HQ's;
-- Pagina de visualização individual de cada HQ;
-- Carrinho de compras.
-
-
-# Opcionais
-
-- 10% das HQ's da listagem devem ser marcadas como "raras" aleatoriamente;
-- Carrinho deve ter possibilidade de inserir cupom de desconto, com validação mock, sem API;
-- Dois tipos de cupons: comuns e raros, aplicados para cada HQ correspondente.
-
-
-# Checklist
-
-- (X) - Corpo da página
-    - (X) Componentização básica
-    - (X) Componentização dinâmica com a API
-- (X) - Estilização da página
-    - (X) Layout inicial (mobile)
-    - (X) Responsividade
-    - (X) Layout para diferentes tamanhos de tela
-- (X) - Consumo de API
-- () - Testes
-- (X) - Hospedagem
+O carrinho também é salvo no LocalStorage, para que o usuário não perca as compras armazenadas no mesmo, e para que sejam armazenadas as HQ's raras.
