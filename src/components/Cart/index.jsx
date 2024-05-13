@@ -54,8 +54,6 @@ export const Cart = () => {
             setUsedCoupon(true);
             setInputCoupon("");
 
-            couponDetails.type === "rare" ? couponDetails.isRare = true : couponDetails.isRare = false;
-
             toast.success("Coupon applied successfully!", {
                 position: "top-center",
                 autoClose: 2500,
@@ -99,14 +97,15 @@ export const Cart = () => {
             <ol>
                 {cartList.map(comic => {
                     let discount;
+                    console.log(couponDetails.discount)
 
                     if(couponDetails.discount) {
                         const discountedPrice = (comic.prices[0].price / 100) * couponDetails.discount;
 
-                        if(couponDetails.isRare && comic.isRare) {
+                        if(couponDetails.type === "rare" && comic.isRare) {
                             comic.prices[0].price = (comic.prices[0].price - discountedPrice).toFixed(2);
                             discount = couponDetails.discount;
-                        } else if(!couponDetails.isRare && !comic.isRare) {
+                        } else if(couponDetails.type !== "rare" && !comic.isRare) {
                             comic.prices[0].price = (comic.prices[0].price - discountedPrice).toFixed(2);
                             discount = couponDetails.discount;
                         }
