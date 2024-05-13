@@ -9,6 +9,7 @@ export const StyledHeader = styled.header`
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+    z-index: 1;
     
     > div {
         width: 80%;
