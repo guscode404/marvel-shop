@@ -30,7 +30,7 @@ export const Cart = () => {
     }
 
     const confirmPurchase = () => {
-        toast.success("Compra efetuada com sucesso!", {
+        toast.success("Purchased successfully!", {
             position: "top-center",
             autoClose: 2500,
             hideProgressBar: false,
