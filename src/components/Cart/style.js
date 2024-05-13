@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const StyledContainer = styled.div.attrs(props => ({
     className: props.className
 }))`
-    height: 80%;
+
+    height: auto;
+    max-height: 28rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +29,16 @@ export const StyledContainer = styled.div.attrs(props => ({
         margin-top: 0.5rem;
     }
 
+    .coupon-container {
+        margin-top: 0.375rem;
+
+        span {
+            color: #63C5DA;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
     > div > p {
         font-size: 1.5rem;
 
@@ -37,6 +49,9 @@ export const StyledContainer = styled.div.attrs(props => ({
     }
     
     @media (min-width: 768px) {
+        justify-content: space-evenly;
+        width: auto;
+
         ol {
             max-height: 40vh;
         }

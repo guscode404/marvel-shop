@@ -37,7 +37,8 @@ export const StyledModal = styled.div.attrs(props => ({
 
     @media (min-width: 768px) {
         .modal-content {
-            max-height: 75vh;
+            min-width: 30%;
+            max-width: 50%;
         }
     }
 `

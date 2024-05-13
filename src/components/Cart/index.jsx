@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 
 export const Cart = () => {
     const [cartList, setCartList] = useState([])
+    const [showCoupon, setShowCoupon] = useState(false);
     const storedCart = JSON.parse(localStorage.getItem("cart"));
     let cart;
 
@@ -41,6 +42,8 @@ export const Cart = () => {
         cart = [];
     }
 
+    const toggleShowCoupon = () => showCoupon ? setShowCoupon(false) : setShowCoupon(true);
+
     useEffect(() => {
         if(cart) {
             setCartList(cart);
@@ -66,6 +69,14 @@ export const Cart = () => {
                 <>
                     <p>Total: <span>${obtainTotalValue()}</span></p>
                     <button onClick={confirmPurchase} className="buy-button">Efetuar compra</button>
+                    <div className="coupon-container">
+                        <p>Tem um cupom? <span onClick={toggleShowCoupon}>Inserir</span></p>
+                        {showCoupon ?
+                            <input type="text" /> :
+                            null
+                        }
+                    </div>
+                   
                 </>
                 }
             </div>
