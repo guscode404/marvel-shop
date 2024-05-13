@@ -15,7 +15,11 @@ export const CartComic = ({ comic, cartList, setCartList }) => {
                 <button onClick={removeFromCart}><FontAwesomeIcon icon={faX} /></button>
                 <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="Comic Cover" />
                 <h2>{comic.title}</h2>
-                <h3>{comic.prices[0].price}</h3>
+                <h3>${comic.prices[0].price}</h3>
+                {comic.isRare ?
+                    <p className="rare">Produto Raro</p> :
+                    null
+                }
             </div>
         </StyledCartComic>
     )

@@ -1,11 +1,24 @@
 import styled from "styled-components";
 
-export const StyledListItem = styled.li`
+export const StyledListItem = styled.li.attrs(props => ({
+    className: props.className
+}))`
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
     padding: 0 0.5rem 0.75rem;
     border-bottom: 1px solid #00000099;
+    position: relative;
+
+    .rare-marker {
+        position: absolute;
+        font-size: 2rem;
+        background-color: #FFD700;
+        color: #000000;
+        border: 1px solid black;
+        border-radius: 0.375rem;
+        padding: 0.5rem;
+    }
 
     > img {
         border-radius: 0.75rem;

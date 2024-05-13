@@ -10,6 +10,10 @@ export const Comic = ({ comic, id }) => {
 
     return (
         <StyledListItem>
+            {comic.isRare ?
+                <div className="rare-marker">Raro</div> :
+                null
+            }
             <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="Comic Cover" />
             <h2>{comic.title}</h2>
             <h3>${comic.prices[0].price}</h3>

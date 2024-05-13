@@ -34,6 +34,11 @@ export const StyledCartComic = styled.li`
         > h3 {
             font-size: 1rem;
         }
+
+        .rare {
+            color: #FFD700;
+            text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+        }
     }
 
     @media (min-width: 768px) {
