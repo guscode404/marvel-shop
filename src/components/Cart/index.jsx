@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import { CartComic } from "./CartComic";
 import { StyledContainer } from "./style";
 import { toast } from "react-toastify";
+import { coupons } from "../../mocks/coupons";
 
 export const Cart = () => {
     const [cartList, setCartList] = useState([])
     const [showCoupon, setShowCoupon] = useState(false);
+    const [inputCoupon, setInputCoupon] = useState("");
+    const [usedCoupon, setUsedCoupon] = useState(false);
+    const [couponDetails, setCouponDetails] = useState({});
     const storedCart = JSON.parse(localStorage.getItem("cart"));
     let cart;
 
@@ -42,7 +46,43 @@ export const Cart = () => {
         cart = [];
     }
 
-    const toggleShowCoupon = () => showCoupon ? setShowCoupon(false) : setShowCoupon(true);
+    const validateCoupon = (couponName) => {
+        const index = coupons.findIndex((coupon) => coupon.name === couponName);
+
+        if(index !== -1) {
+            const type = coupons[index].type;
+            couponDetails.discount = coupons[index].discount;
+            console.log(couponDetails);
+            setUsedCoupon(true);
+            setInputCoupon("");
+
+            if(type === "rare") {
+                couponDetails.isRare = true;
+            } else {
+                couponDetails.isRare = false;
+            }
+            console.log(couponDetails);
+        } 
+    }
+
+    const toggleShowCoupon = () => {
+        if(showCoupon) {
+            setShowCoupon(false);
+            setInputCoupon("");
+        } else {
+            setShowCoupon(true);
+        }
+    }
+
+    const toggleUsedCoupon = () => {
+        if(usedCoupon) {
+            setUsedCoupon(false)
+            setCouponDetails({});
+            setCartList(JSON.parse(localStorage.getItem("cart")));
+        } else {
+            setUsedCoupon(true)
+        }
+    };
 
     useEffect(() => {
         if(cart) {
@@ -53,35 +93,48 @@ export const Cart = () => {
     return(
         <StyledContainer>
             <ol>
-                {cartList.map(comic => 
-                    <CartComic
+                {cartList.map(comic => {
+                    if(couponDetails.discount) {
+                        const discountedPrice = (comic.prices[0].price / 100) * couponDetails.discount;
+
+                        if(couponDetails.isRare && comic.isRare) {
+                            comic.prices[0].price = (comic.prices[0].price - discountedPrice).toFixed(2);
+                        } else if(!couponDetails.isRare && !comic.isRare) {
+                            comic.prices[0].price = (comic.prices[0].price - discountedPrice).toFixed(2);
+                        }
+                    }
+
+                    return <CartComic
                         key={comic.id}
                         comic={comic} 
                         cartList={cartList}
                         setCartList={setCartList}
                     />
-                )}
+                })}
             </ol>
-
             <div>
                 {cart.length === 0 ?
                 <p>Seu carrinho está vazio!</p> :
                 <>
                     <p>Total: <span>${obtainTotalValue()}</span></p>
                     <button onClick={confirmPurchase} className="buy-button">Efetuar compra</button>
-                    <div className="coupon-container">
-                        <p>Tem um cupom? <span onClick={toggleShowCoupon}>Inserir</span></p>
-                        {showCoupon ?
-                            <div>
-                                <input type="text" />
-                                <button>
-                                    Aplicar
-                                </button>
-                            </div> :
-                            null
-                        }
-                    </div>
-                   
+                    {usedCoupon ?
+                        <div className="coupon-container">
+                            <p>Cupom aplicado. <span onClick={toggleUsedCoupon}>Remover?</span></p>
+                        </div> :
+                        <div className="coupon-container">
+                            <p>Tem um cupom? <span onClick={toggleShowCoupon}>Inserir</span></p>
+                            {showCoupon ?
+                                <div>
+                                    <input type="text" onChange={(e) => setInputCoupon(e.target.value)} />
+                                    <button onClick={() => validateCoupon(inputCoupon)}>
+                                        Aplicar
+                                    </button>
+                                </div> :
+                                null
+                            }
+                        </div>
+                    }
                 </>
                 }
             </div>
