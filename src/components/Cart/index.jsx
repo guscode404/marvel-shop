@@ -114,21 +114,21 @@ export const Cart = () => {
             </ol>
             <div>
                 {cart.length === 0 ?
-                <p>Seu carrinho está vazio!</p> :
+                <p>Your cart is empty!</p> :
                 <>
                     <p>Total: <span>${obtainTotalValue()}</span></p>
-                    <button onClick={confirmPurchase} className="buy-button">Efetuar compra</button>
+                    <button onClick={confirmPurchase} className="buy-button">Purchase</button>
                     {usedCoupon ?
                         <div className="coupon-container">
-                            <p>Cupom aplicado. <span onClick={toggleUsedCoupon}>Remover?</span></p>
+                            <p>Coupon applied. <span onClick={toggleUsedCoupon}>Remove?</span></p>
                         </div> :
                         <div className="coupon-container">
-                            <p>Tem um cupom? <span onClick={toggleShowCoupon}>Inserir</span></p>
+                            <p>Has a coupon? <span onClick={toggleShowCoupon}>Insert</span></p>
                             {showCoupon ?
                                 <div>
                                     <input type="text" onChange={(e) => setInputCoupon(e.target.value)} />
                                     <button onClick={() => validateCoupon(inputCoupon)}>
-                                        Aplicar
+                                        Insert
                                     </button>
                                 </div> :
                                 null

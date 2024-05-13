@@ -22,7 +22,7 @@ export const Comic = ({ comic, id }) => {
             <h2>{comic.title}</h2>
             <h3>${comic.prices[0].price}</h3>
             <Link to={`/view/${id}`}>
-                <button>Detalhes</button>
+                <button>Details</button>
             </Link>
         </StyledListItem>
     )

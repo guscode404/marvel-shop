@@ -30,7 +30,7 @@ function App() {
         theme="dark"
       />
       { isModalOpen ?
-          <Modal toggleModal={toggleModal} modalTitle="Seu carrinho">
+          <Modal toggleModal={toggleModal} modalTitle="Your cart">
             <Cart />
           </Modal> :
         null }

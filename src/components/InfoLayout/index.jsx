@@ -14,7 +14,7 @@ export const InfoLayout = ({ comic }) => {
             if(!isComicInCart) {
                 localStorage.setItem("cart", JSON.stringify([...cart, comic]));
             } else {
-                toast.error("O quadrinho já está no carrinho!", {
+                toast.error("This comic is already in the cart!", {
                     position: "top-center",
                     autoClose: 2500,
                     hideProgressBar: false,
@@ -40,27 +40,27 @@ export const InfoLayout = ({ comic }) => {
                 />
                 <h1>{comic.title}</h1>
                 {comic.isRare ?
-                    <h2 className="rare">Produto Raro</h2> :
+                    <h2 className="rare">Rare Product</h2> :
                     null 
                 }
                 <div>
-                    <p>Por <span>${comic.prices[0].price}</span></p>
+                    <p>For <span>${comic.prices[0].price}</span></p>
                     <section className="product-info">
-                        <h2>Informações</h2>
+                        <h2>Informations</h2>
 
                         {comic.description !== "" ?
                             <p>{comic.description}</p> :
-                            <p>Descrição indisponível</p>
+                            <p>Description is unavailable.</p>
                         }
                         
                         {comic.pageCount !== 0 ?
-                            <h3><span>{comic.pageCount} páginas</span></h3> :
-                            <h3>Contagem de páginas indisponível</h3>
+                            <h3><span>{comic.pageCount} pages</span></h3> :
+                            <h3>Page count is unavailable.</h3>
                         }
 
                         {comic.creators.items[0] !== undefined ?
                             <h3>
-                                <span>Criado por:</span> {
+                                <span>Created by:</span> {
                                     comic.creators.items.map((creator, index) => {
                                     if(index === 0) {
                                         return creator.name;
@@ -69,11 +69,11 @@ export const InfoLayout = ({ comic }) => {
                                     })
                                 }
                             </h3> :
-                            <h3>Criador indisponível</h3>
+                            <h3>Creator is unavailable.</h3>
                         }
                         
                         <button onClick={addToCart}>
-                            Adicionar ao carrinho
+                            Add to cart
                         </button>
                     </section>
                 </div>

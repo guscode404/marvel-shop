@@ -11,7 +11,7 @@ export const ComicList = ({ page, setPage, list }) => {
         } else if(button === "previous" && page !== (1)) {
             setPage(page - 1);
         } else {
-            toast.error("Página indisponível!", {
+            toast.error("Page unavailable!", {
                 position: "top-center",
                 autoClose: 2500,
                 hideProgressBar: false,
@@ -40,12 +40,12 @@ export const ComicList = ({ page, setPage, list }) => {
                 <button onClick={() => handlePages("previous")}>
                     <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
-                <span>Página</span>
+                <span>Page</span>
                 <button onClick={() => handlePages("next")}>
                     <FontAwesomeIcon icon={faChevronRight} />
                 </button>
             </StyledContainer>
-            <span>{page} de {list.length / 4}</span>
+            <span>{page} of {list.length / 4}</span>
         </>
     )
 }

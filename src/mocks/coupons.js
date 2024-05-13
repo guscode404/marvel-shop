@@ -1,4 +1,4 @@
 export const coupons = [
-    { "name": "DESCONTO20", "discount": 20, "type": "common" },
-    { "name": "DESCONTORARO", "discount": 10, "type": "rare" }
+    { "name": "20DISCOUNT", "discount": 20, "type": "common" },
+    { "name": "RAREDISCOUNT", "discount": 10, "type": "rare" }
 ]

@@ -17,7 +17,7 @@ export const CartComic = ({ comic, cartList, setCartList }) => {
                 <h2>{comic.title}</h2>
                 <h3>${comic.prices[0].price}</h3>
                 {comic.isRare ?
-                    <p className="rare">Produto Raro</p> :
+                    <p className="rare">Rare Product</p> :
                     null
                 }
             </div>
