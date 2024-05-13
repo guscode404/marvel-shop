@@ -1,5 +1,5 @@
 describe('navigation pages', () => {
-  it('should be navigate pages correctly', () => {
+  it('should be able to navigate pages correctly', () => {
     cy.visit('/');
 
     const nextButton = cy.get('section div button')
@@ -8,16 +8,16 @@ describe('navigation pages', () => {
     const previousButton = cy.get('section div button')
       .eq(0);
 
-    cy.get('section > span').should('contain.text', '1 de');
+    cy.get('section > span').should('contain.text', '1 of');
 
     previousButton.click();
-    cy.get('section > span').should('contain.text', '1 de');
+    cy.get('section > span').should('contain.text', '1 of');
 
     nextButton.click();
-    cy.get('section > span').should('contain.text', '2 de');
+    cy.get('section > span').should('contain.text', '2 of');
 
     previousButton.click();
-    cy.get('section > span').should('contain.text', '1 de');
+    cy.get('section > span').should('contain.text', '1 of');
 
     let title;
     cy.get('li h2').should(($h2) => {
@@ -32,6 +32,6 @@ describe('navigation pages', () => {
     for(let i = 0; i < 19; i++) {
       nextButton.click()
     }
-    cy.get('section > span').should('contain.text', '20 de');
+    cy.get('section > span').should('contain.text', '20 of');
   })
 })

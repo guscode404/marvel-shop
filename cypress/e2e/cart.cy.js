@@ -1,12 +1,12 @@
 describe('view details', () => {
-  it('should be navigate pages correctly', () => {
+  it('should be able to use the cart correctly', () => {
     cy.visit('/');
     
     const cartButton = cy.get('nav button').eq(0);
 
     cartButton.click();
 
-    cy.get('.modal-content p').should('contain.text', 'Seu carrinho está vazio!');
+    cy.get('.modal-content p').should('contain.text', 'Your cart is empty!');
     
     cy.get('.top-menu button').click();
 
@@ -39,6 +39,6 @@ describe('view details', () => {
           .click();
     }
 
-    cy.get('.modal-content p').should('contain.text', 'Seu carrinho está vazio!');
+    cy.get('.modal-content p').should('contain.text', 'Your cart is empty!');
   })
 })

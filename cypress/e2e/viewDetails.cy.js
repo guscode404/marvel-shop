@@ -1,5 +1,5 @@
 describe('view details', () => {
-  it('should be navigate pages correctly', () => {
+  it('should be able to view details correctly', () => {
     cy.visit('/');
 
     let title;
