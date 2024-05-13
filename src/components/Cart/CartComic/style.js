@@ -36,7 +36,7 @@ export const StyledCartComic = styled.li`
         }
 
         .rare {
-            color: #FFD700;
+            color: #FFFF00;
             text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
         }
     }

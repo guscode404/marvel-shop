@@ -13,7 +13,7 @@ export const StyledListItem = styled.li.attrs(props => ({
     .rare-marker {
         position: absolute;
         font-size: 2rem;
-        background-color: #FFD700;
+        background-color: #FFFF00;
         color: #000000;
         border: 1px solid black;
         border-radius: 0.375rem;
