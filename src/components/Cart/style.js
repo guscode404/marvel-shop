@@ -54,20 +54,22 @@ export const StyledContainer = styled.div.attrs(props => ({
             justify-content: center;
             align-items: center;
             gap: 0.25rem;
+            margin-top: 0.25rem;
 
 
             > input {
-                margin-top: 0.25rem;
+                border-radius: 0.5rem;
+                padding: 0 0.25rem;
             }
 
             > button {
-                background-color: #FFFFFF;
+                font-size: 0.75rem;
+                border-radius: 0.5rem;
+                padding: 0.25rem;
+                background-color: #2DD638;
+                color: #FFFFFF;
                 border: none;
                 cursor: pointer;
-
-                > svg {
-                    font-size: 1rem;
-                }
             }
         }
     }

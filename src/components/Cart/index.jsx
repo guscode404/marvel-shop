@@ -76,7 +76,9 @@ export const Cart = () => {
                         {showCoupon ?
                             <div>
                                 <input type="text" />
-                                <button><FontAwesomeIcon icon={faPlay} /></button>
+                                <button>
+                                    Aplicar
+                                </button>
                             </div> :
                             null
                         }
