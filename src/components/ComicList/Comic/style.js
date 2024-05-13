@@ -13,11 +13,13 @@ export const StyledListItem = styled.li.attrs(props => ({
     .rare-marker {
         position: absolute;
         font-size: 2rem;
-        background-color: #FFFF00;
-        color: #000000;
-        border: 1px solid black;
-        border-radius: 0.375rem;
+        color: #FFFF00;
+        border: 1px solid #000000;
+        background-color: #00000066;
+        border-radius: 2rem;
         padding: 0.5rem;
+        top: 0.25rem;
+        left: 0.75rem;
     }
 
     > img {
@@ -53,6 +55,11 @@ export const StyledListItem = styled.li.attrs(props => ({
         border: none;
         justify-content: center;
         align-items: center;
+
+        .rare-marker {
+            top: auto;
+            left: auto;
+        }
 
         > img {
             height: 12rem;
