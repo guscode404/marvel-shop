@@ -50,12 +50,11 @@ export const Cart = () => {
         const index = coupons.findIndex((coupon) => coupon.name === couponName);
 
         if(index !== -1) {
-            const type = coupons[index].type;
-            couponDetails.discount = coupons[index].discount;
+            setCouponDetails(coupons[index]);
             setUsedCoupon(true);
             setInputCoupon("");
 
-            type === "rare" ? couponDetails.isRare = true : couponDetails.isRare = false;
+            couponDetails.type === "rare" ? couponDetails.isRare = true : couponDetails.isRare = false;
 
             toast.success("Coupon applied successfully!", {
                 position: "top-center",
@@ -125,7 +124,10 @@ export const Cart = () => {
                     <button onClick={confirmPurchase} className="buy-button">Purchase</button>
                     {usedCoupon ?
                         <div className="coupon-container">
-                            <p>Coupon applied. <span onClick={toggleUsedCoupon}>Remove?</span></p>
+                            <p>
+                                Coupon applied: {couponDetails.discount}% discount
+                                on {couponDetails.type} comics. <span onClick={toggleUsedCoupon}>Remove?</span>
+                            </p>
                         </div> :
                         <div className="coupon-container">
                             <p>Has a coupon? <span onClick={toggleShowCoupon}>Insert</span></p>
