@@ -18,6 +18,14 @@ export const StyledContainer = styled.div.attrs(props => ({
         margin-bottom: 0.5rem;
     }
 
+    > div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .buy-button {
         background-color: #2DD638;
         border: none;
@@ -31,11 +39,36 @@ export const StyledContainer = styled.div.attrs(props => ({
 
     .coupon-container {
         margin-top: 0.375rem;
+        width: 100%;
+        font-size: 1.25rem;
 
         span {
             color: #63C5DA;
             text-decoration: underline;
             cursor: pointer;
+        }
+
+        > div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.25rem;
+
+
+            > input {
+                margin-top: 0.25rem;
+            }
+
+            > button {
+                background-color: #FFFFFF;
+                border: none;
+                cursor: pointer;
+
+                > svg {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 

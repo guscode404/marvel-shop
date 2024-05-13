@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { CartComic } from "./CartComic";
 import { StyledContainer } from "./style";
 import { toast } from "react-toastify";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Cart = () => {
     const [cartList, setCartList] = useState([])
@@ -72,7 +74,10 @@ export const Cart = () => {
                     <div className="coupon-container">
                         <p>Tem um cupom? <span onClick={toggleShowCoupon}>Inserir</span></p>
                         {showCoupon ?
-                            <input type="text" /> :
+                            <div>
+                                <input type="text" />
+                                <button><FontAwesomeIcon icon={faPlay} /></button>
+                            </div> :
                             null
                         }
                     </div>
