@@ -52,16 +52,10 @@ export const Cart = () => {
         if(index !== -1) {
             const type = coupons[index].type;
             couponDetails.discount = coupons[index].discount;
-            console.log(couponDetails);
             setUsedCoupon(true);
             setInputCoupon("");
 
-            if(type === "rare") {
-                couponDetails.isRare = true;
-            } else {
-                couponDetails.isRare = false;
-            }
-            console.log(couponDetails);
+            type === "rare" ? couponDetails.isRare = true : couponDetails.isRare = false;
         } 
     }
 
