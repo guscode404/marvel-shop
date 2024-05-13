@@ -42,6 +42,10 @@ export const StyledContainer = styled.div.attrs(props => ({
         width: 100%;
         font-size: 1.25rem;
 
+        > p {
+            font-size: 1rem;
+        }
+
         span {
             color: #63C5DA;
             text-decoration: underline;
