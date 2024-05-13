@@ -56,6 +56,17 @@ export const Cart = () => {
             setInputCoupon("");
 
             type === "rare" ? couponDetails.isRare = true : couponDetails.isRare = false;
+
+            toast.success("Coupon applied successfully!", {
+                position: "top-center",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light"
+            });
         } 
     }
 
