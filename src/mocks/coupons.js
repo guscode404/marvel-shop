@@ -1,2 +1,2 @@
-export const commonCoupon = { coupon: "common_coupon", discount: 40 };
-export const rareCoupon = { coupon: "rare_coupon", discount: 20 };
+export const commonCoupon = { name: "common_coupon", discount: 40, type: "common" };
+export const rareCoupon = { name: "rare_coupon", discount: 20, type: "rare" };
