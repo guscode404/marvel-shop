@@ -13,6 +13,16 @@ export const InfoLayout = ({ comic }) => {
 
             if(!isComicInCart) {
                 localStorage.setItem("cart", JSON.stringify([...cart, comic]));
+                toast.success("Comic added to cart!", {
+                    position: "top-center",
+                    autoClose: 2500,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light"
+                });
             } else {
                 toast.error("This comic is already in the cart!", {
                     position: "top-center",

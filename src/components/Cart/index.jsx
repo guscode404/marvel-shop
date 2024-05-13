@@ -97,7 +97,6 @@ export const Cart = () => {
             <ol>
                 {cartList.map(comic => {
                     let discount;
-                    console.log(couponDetails.discount)
 
                     if(couponDetails.discount) {
                         const discountedPrice = (comic.prices[0].price / 100) * couponDetails.discount;
