@@ -18,17 +18,17 @@ function App() {
       <Header toggleModal={toggleModal} />
       <RoutesMain />
       <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="dark"
-            />
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       { isModalOpen ?
           <Modal toggleModal={toggleModal} modalTitle="Seu carrinho">
             <Cart />
