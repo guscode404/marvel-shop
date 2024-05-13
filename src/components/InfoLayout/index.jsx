@@ -39,24 +39,35 @@ export const InfoLayout = ({ comic }) => {
                     alt="Comic Cover"
                 />
                 <h1>{comic.title}</h1>
+                {comic.isRare ?
+                    <h2 className="rare">Produto Raro</h2> :
+                    null 
+                }
                 <div>
                     <p>Por <span>${comic.prices[0].price}</span></p>
                     <section className="product-info">
                         <h2>Informações</h2>
+
+                        {comic.description !== "" ?
+                            <p>{comic.description}</p> :
+                            <p>Descrição indisponível</p>
+                        }
                         
                         {comic.pageCount !== 0 ?
-                            <h3>{comic.pageCount} páginas</h3> :
+                            <h3><span>{comic.pageCount} páginas</span></h3> :
                             <h3>Contagem de páginas indisponível</h3>
                         }
 
                         {comic.creators.items[0] !== undefined ?
                             <h3>
-                                Criado por {comic.creators.items.map((creator, index) => {
+                                <span>Criado por:</span> {
+                                    comic.creators.items.map((creator, index) => {
                                     if(index === 0) {
                                         return creator.name;
                                     }
                                     return ", " + creator.name;
-                                })}
+                                    })
+                                }
                             </h3> :
                             <h3>Criador indisponível</h3>
                         }

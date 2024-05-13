@@ -19,6 +19,11 @@ export const StyledContainer = styled.div.attrs(props => ({
         margin: 0.25rem 0;
     }
 
+    .rare {
+        color: #FFFF00;
+        text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    }
+
     > div {
         text-align: start;
 
@@ -49,6 +54,10 @@ export const StyledContainer = styled.div.attrs(props => ({
         > h3 {
             font-size: 1rem;
             font-weight: 400;
+        }
+
+        span {
+            font-weight: 600;
         }
 
         > button {
