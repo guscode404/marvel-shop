@@ -35,6 +35,11 @@ export const StyledCartComic = styled.li`
             font-size: 1rem;
         }
 
+        > span {
+            font-size: 1rem;
+            color: #00000099;
+        }
+
         .rare {
             color: #FFFF00;
             text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;

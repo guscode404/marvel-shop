@@ -98,13 +98,17 @@ export const Cart = () => {
         <StyledContainer>
             <ol>
                 {cartList.map(comic => {
+                    let discount;
+
                     if(couponDetails.discount) {
                         const discountedPrice = (comic.prices[0].price / 100) * couponDetails.discount;
 
                         if(couponDetails.isRare && comic.isRare) {
                             comic.prices[0].price = (comic.prices[0].price - discountedPrice).toFixed(2);
+                            discount = couponDetails.discount;
                         } else if(!couponDetails.isRare && !comic.isRare) {
                             comic.prices[0].price = (comic.prices[0].price - discountedPrice).toFixed(2);
+                            discount = couponDetails.discount;
                         }
                     }
 
@@ -113,6 +117,7 @@ export const Cart = () => {
                         comic={comic} 
                         cartList={cartList}
                         setCartList={setCartList}
+                        discount={discount}
                     />
                 })}
             </ol>
