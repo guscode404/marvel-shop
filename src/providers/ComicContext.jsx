@@ -11,23 +11,12 @@ export const ComicProvider = ({ children }) => {
             const { data } = await api.get(`/comics?format=comic&formatType=comic&noVariants=false&dateDescriptor=thisMonth&limit=80&apikey=${import.meta.env.VITE_API_KEY}`);
             const list = data.data.results;
 
-            const max = list.length / 10;
-            const numbers = [];
-            for(let i = 0; i < max; i++) {
-                const generateNumber = () => {
-                    let number = Math.round(Math.random() * (list.length - 1));
-                    
-                    if(numbers.includes(number)) {
-                        number = generateNumber();
-                    }
+            const numbers = generateRareNumbers(list);
 
-                    console.log(number);
-                    return number;
-                }
-                
-                numbers.push(generateNumber());
+            for(let i = 0; i < numbers.length; i++) {
+                console.log(i);
+                list[numbers[i]].isRare = true;
             }
-            console.log(numbers);
 
             setComicList(list);
             
@@ -35,6 +24,25 @@ export const ComicProvider = ({ children }) => {
         } else {
             setComicList(JSON.parse(localStorage.getItem("comicList")))
         }
+    }
+
+    const generateRareNumbers = (list) => {
+        const max = list.length / 10;
+        const numbers = [];
+
+        for(let i = 0; i < max; i++) {
+            const generateNumber = () => {
+                let number = Math.round(Math.random() * (list.length - 1));
+                
+                if(numbers.includes(number)) {
+                    number = generateNumber();
+                }
+                return number;
+            }
+            numbers.push(generateNumber());
+        }
+        
+        return numbers;
     }
 
     return(
