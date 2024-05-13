@@ -7,12 +7,10 @@ import { ComicProvider } from './providers/ComicContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <React.StrictMode>
-      <ComicProvider>
-        <ShopProvider>
-          <App />
-        </ShopProvider>
-      </ComicProvider>
-    </React.StrictMode>
+    <ComicProvider>
+      <ShopProvider>
+        <App />
+      </ShopProvider>
+    </ComicProvider>
   </BrowserRouter>
 )
